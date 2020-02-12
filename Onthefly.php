@@ -26,7 +26,7 @@
                     <div class='swanky_wrapper__content'>
                         <ul>
                             <li><a href="Onthefly.php">HomePage</a></li>
-                            <li><a href="OnTheFlyOverzicht.php">Overzicht</a></li>
+                            <li><a href="OnTheFlyOverzicht.php">Overzicht Vluchten</a></li>
                             <li><a href="OnTheFlyInvoegen.php">Vluvhten Invoegen</a></li>
                             <li>Vluchten zoeken</li>
                         </ul>
@@ -39,9 +39,9 @@
                     <div class='bar'></div>
                     <div class='swanky_wrapper__content'>
                         <ul>
-                            <li>Test</li>
-                            <li>Test</li>
-                            <li>Test</li>
+                            <li><a href="Onthefly.php">HomePage</a></li>
+                            <li><a href="OnTheFlyVliegOverzicht.php">Overzicht Vliegtuigen</a></li>
+                            <li><a href="OnTheFlyVliegToevoegen.php">Toevoegen Vliegtuigen</a></li>
                             <li>Test</li>
                         </ul>
                     </div>

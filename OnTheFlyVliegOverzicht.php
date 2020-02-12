@@ -58,43 +58,39 @@
     <thead>
     <tr>
         <th>id</th>
-        <th>vluchtnummer</th>
-        <th>welk vliegtuig</th>
-        <th>datum vertrek</th>
-        <th>datum retour</th>
-        <th>bestemming</th>
+        <th>vliegtuignummer</th>
+        <th>type vliegtuig</th>
+        <th>vliegtuigmaatschappij</th>
         <th>status</th>
     </tr>
     </thead>
     <tbody>
-<?php
-$host = "localhost";
-$dbname = "onthefly";
-$username = "root";
-$password = "";
+    <?php
+    $host = "localhost";
+    $dbname = "onthefly";
+    $username = "root";
+    $password = "";
 
-$conn = new PDO("mysql:host=$host;dbname=$dbname","$username","$password") or die("Verbinding mislukt!");
+    $conn = new PDO("mysql:host=$host;dbname=$dbname","$username","$password") or die("Verbinding mislukt!");
 
-$query = "SELECT * FROM planning";
-$stm = $conn->prepare($query);
-if($stm->execute()){
+    $query = "SELECT * FROM vliegtuigen";
+    $stm = $conn->prepare($query);
+    if($stm->execute()){
 
-    $airplanes = $stm->fetchAll(PDO::FETCH_OBJ);
+        $airplanes = $stm->fetchAll(PDO::FETCH_OBJ);
 
-    foreach($airplanes as $airplane){
+        foreach($airplanes as $airplane){
 
-        echo "<tr>";
-        echo "<td>$airplane->id</td>";
-        echo "<td>$airplane->vluchtnummer</td>";
-        echo "<td>$airplane->welkvliegtuig</td>";
-        echo "<td>$airplane->datumvertrek</td>";
-        echo "<td>$airplane->datumretour</td>";
-        echo "<td>$airplane->bestemming</td>";
-        echo "<td>$airplane->status</td>";
-        echo "</tr>";
+            echo "<tr>";
+            echo "<td>$airplane->id</td>";
+            echo "<td>$airplane->vliegtuignummer</td>";
+            echo "<td>$airplane->type</td>";
+            echo "<td>$airplane->vliegtuigmaatschappij</td>";
+            echo "<td>$airplane->status</td>";
+            echo "</tr>";
+        }
     }
-}
-?>
+    ?>
     </tbody>
 </table>
 
